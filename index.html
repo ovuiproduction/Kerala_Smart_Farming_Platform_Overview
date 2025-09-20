@@ -248,6 +248,137 @@
                 font-size: 20px;
             }
         }
+         .ideal-approach {
+                background: rgba(255, 255, 255, 0.95);
+                border-radius: 20px;
+                padding: 30px;
+                margin-bottom: 30px;
+                box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            }
+
+            .phase-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                gap: 30px;
+                margin-top: 30px;
+            }
+
+            .phase-card {
+                border-radius: 15px;
+                padding: 25px;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+            }
+
+            .phase-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .phase-1 {
+                background: linear-gradient(135deg, #E8F5E8 0%, #C8E6C9 100%);
+                border-top: 5px solid #4CAF50;
+            }
+
+            .phase-2 {
+                background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+                border-top: 5px solid #2196F3;
+            }
+
+            .phase-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            .phase-number {
+                width: 50px;
+                height: 50px;
+                background: linear-gradient(135deg, #4CAF50, #66BB6A);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                font-weight: bold;
+                color: white;
+                margin-right: 15px;
+                flex-shrink: 0;
+            }
+
+            .phase-2 .phase-number {
+                background: linear-gradient(135deg, #2196F3, #42A5F5);
+            }
+
+            .phase-title h3 {
+                color: #2E7D32;
+                margin: 0;
+                font-size: 1.4em;
+            }
+
+            .timeline {
+                color: #666;
+                font-size: 0.9em;
+                font-weight: normal;
+            }
+
+            .phase-content p {
+                color: #555;
+                margin-bottom: 20px;
+                font-size: 1.05em;
+                line-height: 1.5;
+            }
+
+            .reasons ul {
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+            }
+
+            .reasons li {
+                padding: 10px 0;
+                padding-left: 25px;
+                position: relative;
+                border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+                font-size: 0.95em;
+                line-height: 1.4;
+            }
+
+            .reasons li:last-child {
+                border-bottom: none;
+            }
+
+            .reasons li::before {
+                content: '✓';
+                position: absolute;
+                left: 0;
+                color: #4CAF50;
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            .phase-2 .reasons li::before {
+                color: #2196F3;
+            }
+
+            @media (max-width: 768px) {
+                .phase-container {
+                    grid-template-columns: 1fr;
+                }
+                
+                .phase-card {
+                    min-width: auto;
+                }
+                
+                .phase-number {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 20px;
+                }
+                
+                .phase-title h3 {
+                    font-size: 1.2em;
+                }
+            }
     </style>
 </head>
 <body>
@@ -442,6 +573,59 @@
                 <div class="feature-icon">📊</div>
                 <div class="feature-title">Smart Analytics</div>
                 <p>Track your farming activities, costs, yields, and profits. Get insights for better decision making.</p>
+            </div>
+        </div>
+
+        <div class="ideal-approach">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #2E7D32; font-size: 2em;">💡 Ideal Development Approach</h2>
+            
+            <div class="phase-container">
+                <div class="phase-card phase-1">
+                    <div class="phase-header">
+                        <div class="phase-number">1</div>
+                        <div class="phase-title">
+                            <h3>Progressive Web App (PWA)</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="phase-content">
+                        <p><strong>Start with PWA – works like a website but installable as an app. Faster to build, easy updates.</strong></p>
+                        
+                        <div class="reasons">
+                            <ul>
+                                <li><strong>⚡ Fast Development</li>
+                                <li><strong>💰 Cost Effective:</strong> Single codebase for all devices</li>
+                                <li><strong>🔄 Easy Updates:</strong> No app store approvals needed</li>
+                                <li><strong>📱 Universal Access:</strong> Works on any smartphone/computer</li>
+                                <li><strong>📥 Installable:</strong> Feels like native app when installed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-card phase-2">
+                    <div class="phase-header">
+                        <div class="phase-number">2</div>
+                        <div class="phase-title">
+                            <h3>Native Mobile Apps</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="phase-content">
+                        <p><strong>Move to dedicated mobile app with advanced features (offline mode, local storage, push notifications, voice input).</strong></p>
+                        
+                        <div class="reasons">
+                            <ul>
+                                <li><strong>📱 Offline Mode:</strong> Works without internet connection</li>
+                                <li><strong>💾 Local Storage:</strong> Cache data for 30+ days</li>
+                                <li><strong>🔔 Push Notifications:</strong> Weather alerts, reminders</li>
+                                <li><strong>🎤 Advanced Voice:</strong> Better Malayalam voice recognition</li>
+                                <li><strong>📸 Camera Integration:</strong> Pest detection, crop monitoring</li>
+                                <li><strong>📍 GPS Features:</strong> Field mapping, location-based alerts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
